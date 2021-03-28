@@ -1,6 +1,47 @@
-import { Container } from 'theme-ui'
+import { Container, Flex, Box, Heading, Text, Link as A, Card } from 'theme-ui'
+
+<Box
+  as="header"
+  sx={{
+    bg: 'sheet',
+    textAlign: 'center',
+    px: 3,
+    pb: [3, 4],
+    mb: [3, 4]
+  }}
+>
+  <Heading as="h1" variant="title" color="primary" mb={2}>
+    Hack Club Meetings
+  </Heading>
+  <Container variant="copy">
+    <Heading
+      as="h2"
+      variant="subtitle"
+      sx={{ mt: 3, color: 'text' }}
+    >
+      A collection of real{' '}
+      <A href="https://hackclub.com/">Hack Club</A> meetings, paired with everything you need to run them in your own club.
+    </Heading>
+  </Container>
+</Box>
 
 <Container>
+  <Card
+    as="header"
+    sx={{
+      width: 100,
+      mx: 2
+    }}>
+    <Heading
+      variant="headline"
+      as="h2"
+      sx={t => t.util.gxText('cyan', 'blue')}
+      mx="15vw"
+      my={0}
+    >
+      Hello!
+    </Heading>
+  </Card>
 
 # Hello!
 
