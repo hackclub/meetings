@@ -36,6 +36,7 @@ const Meeting = ({ name, img, slug }) => (
 )
 
 const MeetingList = () => {
+  // TODO: get cycling color here
   return (
   <Grid
     gap={[3, 4]}
