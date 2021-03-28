@@ -20,7 +20,7 @@ const NavButton = ({ sx, ...props }) => (
   />
 )
 
-const BackButton = ({ to = '/', text = 'All Events' }) => (
+const BackButton = ({ to = '/', text = 'All Meetings' }) => (
   <Link href={to} passHref>
     <NavButton
       as="a"

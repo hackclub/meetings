@@ -37,6 +37,9 @@ const Meeting = ({ name, img, slug }) => (
 
 const MeetingList = () => {
   // TODO: get cycling color here
+  Object.keys(data['meetings']).map(meeting => {
+    console.log(data['meetings'][meeting])
+  })
   return (
   <Grid
     gap={[3, 4]}
@@ -46,9 +49,11 @@ const MeetingList = () => {
       '@media print': { gridTemplateColumns: 'repeat(2,1fr)' }
     }}
   >
-    {data['meetings'].map(meeting => (
-      <Meeting name={meeting.title} img={meeting.img} slug={meeting.slug} />
-    ))}
+    {Object.keys(data['meetings']).map(meeting => {
+      const meetingData = data['meetings'][meeting]
+      return (
+        <Meeting name={meetingData.title} img={meetingData.img} slug={meetingData.slug} />
+      )})}
   </Grid>
   )
 }

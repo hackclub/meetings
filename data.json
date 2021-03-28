@@ -1,21 +1,24 @@
 {
-  "meetings": [
-    {
+  "meetings": {
+    "generativeart": {
       "title": "Generative Art",
       "img": "https://cloud-yjk47pvf1-hack-club-bot.vercel.app/0screen_shot_2021-03-28_at_2.54.20_pm.png",
-      "slug": "generativeart"
+      "slug": "generativeart",
+      "author": "@ClaireBookworm"
     },
-    {
+    "teachablemachine": {
       "title": "Teachable Machine",
       "img": "https://cloud-al9m697ll-hack-club-bot.vercel.app/0screen_shot_2021-03-28_at_4.56.12_pm.png",
-      "slug": "teachablemachine"
+      "slug": "teachablemachine",
+      "author": "@JeewooC"
     },
-    {
+    "soundgalaxy": {
       "title": "Sound Galaxy",
       "img": "https://cloud-lp8q2nxpt-hack-club-bot.vercel.app/0screen_shot_2021-03-28_at_4.52.02_pm.png",
-      "slug": "soundgalaxy"
+      "slug": "soundgalaxy",
+      "author": "@MatthewStanciu"
     }
-  ],
+  },
   "colors": [
     {
       "cyanblue": {
