@@ -42,7 +42,7 @@ const MeetingList = () => {
     gap={[3, 4]}
     columns={[null, 2, 3]}
     sx={{
-      mt: [3, 4],
+      my: [3, 4],
       '@media print': { gridTemplateColumns: 'repeat(2,1fr)' }
     }}
   >
