@@ -50,7 +50,7 @@ const Letterhead = ({
             variant="subtitle"
             sx={{ mt: 3, color: 'secondary' }}
           >
-            By {author}. Run on {date}.
+            Run on {date} by {author}.
           </Heading>
         </Container>
       </Box>
