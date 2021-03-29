@@ -6,7 +6,7 @@ const Meeting = ({ name, img, slug }) => (
     <Card
       variant="interactive"
       sx={{
-        backgroundImage: t => t.util.gx('cyan', 'blue'),
+        backgroundImage: t => t.util.gx('red', 'orange'),
         color: 'white',
         p: [0, 0],
         lineHeight: 0,
