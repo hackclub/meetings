@@ -19,28 +19,26 @@
       "author": "@MatthewStanciu"
     }
   },
-  "colors": [
-    {
-      "cyanblue": {
-        "color1": "cyan",
-        "color2": "blue"
-      },
-      "greencyan": {
-        "color1": "green",
-        "color2": "cyan"
-      },
-      "orangeyellow": {
-        "color1": "orange",
-        "color2": "yellow"
-      },
-      "bluepurple": {
-        "color1": "blue",
-        "color2": "purple"
-      },
-      "redorange": {
-        "color1": "red",
-        "color2": "orange"
-      }
+  "colors": {
+    "redorange": {
+      "color1": "red",
+      "color2": "orange"
+    },
+    "cyanblue": {
+      "color1": "cyan",
+      "color2": "blue"
+    },
+    "greencyan": {
+      "color1": "green",
+      "color2": "cyan"
+    },
+    "orangeyellow": {
+      "color1": "orange",
+      "color2": "yellow"
+    },
+    "bluepurple": {
+      "color1": "blue",
+      "color2": "purple"
     }
-  ]
+  }
 }
