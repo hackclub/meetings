@@ -1,4 +1,4 @@
-import { Card, Box, Container } from 'theme-ui'
+import { Box, Container } from 'theme-ui'
 import YouTubePlayer from 'react-player/youtube'
 
 const Embed = props => {
@@ -36,7 +36,7 @@ const Embed = props => {
 
 const YouTubeEmbed = ({ url }) => (
   <Embed>
-    <YouTubePlayer url={url} controls="true" />
+    <YouTubePlayer url={url} controls={true} />
   </Embed>
 )
 
