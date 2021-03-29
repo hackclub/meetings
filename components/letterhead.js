@@ -22,6 +22,7 @@ const Letterhead = ({
         <Meta
           as={Head}
           title={title}
+          name="Meetings"
           description={
             author?.name && date
               ? `Run by ${author} on ${date}.`
