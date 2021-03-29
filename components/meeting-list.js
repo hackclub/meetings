@@ -48,18 +48,18 @@ const MeetingList = () => {
   >
     {Object.keys(data['meetings']).map((meeting, i) => {
       const meetingData = data['meetings'][meeting]
-      const color = getColor(i)
+      const colors = getColors(i)
       return (
-        <Meeting name={meetingData.title} img={meetingData.img} slug={meetingData.slug} color1={color[1].color1} color2={color[1].color2} key={i} />
+        <Meeting name={meetingData.title} img={meetingData.img} slug={meetingData.slug} color1={colors.color1} color2={colors.color2} key={i} />
       )})}
   </Grid>
   )
 }
 
-const getColor = (meetingIndex) => {
+const getColors = (meetingIndex) => {
   const data = require('../data.json')
   const colors = Object.entries(data['colors'])
-  return colors[meetingIndex % colors.length]
+  return colors[meetingIndex % colors.length][1]
 }
 
 export default MeetingList
