@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Meta from '@hackclub/meta'
-import Header from '../components/header'
-import Authored from '../components/authored'
 import { Container, Box, Heading, Link as A } from 'theme-ui'
 import { Styled as Content } from '../components/content'
 

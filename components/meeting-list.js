@@ -37,9 +37,6 @@ const Meeting = ({ name, img, slug }) => (
 
 const MeetingList = () => {
   // TODO: get cycling color here
-  Object.keys(data['meetings']).map(meeting => {
-    console.log(data['meetings'][meeting])
-  })
   return (
   <Grid
     gap={[3, 4]}
