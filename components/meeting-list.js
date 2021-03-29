@@ -46,10 +46,10 @@ const MeetingList = () => {
       '@media print': { gridTemplateColumns: 'repeat(2,1fr)' }
     }}
   >
-    {Object.keys(data['meetings']).map(meeting => {
+    {Object.keys(data['meetings']).map((meeting, i) => {
       const meetingData = data['meetings'][meeting]
       return (
-        <Meeting name={meetingData.title} img={meetingData.img} slug={meetingData.slug} />
+        <Meeting name={meetingData.title} img={meetingData.img} slug={meetingData.slug} key={i} />
       )})}
   </Grid>
   )
