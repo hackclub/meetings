@@ -58,10 +58,7 @@ const MeetingList = () => {
 
 const getColor = (meetingIndex) => {
   const data = require('../data.json')
-  console.log('hey?')
   const colors = Object.entries(data['colors'])
-  console.log('colors', colors)
-  console.log('selected color', colors[meetingIndex % colors.length])
   return colors[meetingIndex % colors.length]
 }
 
