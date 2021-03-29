@@ -2,13 +2,12 @@ import Head from 'next/head'
 import Meta from '@hackclub/meta'
 import Header from '../components/header'
 import Authored from '../components/authored'
-import { Container, Button } from 'theme-ui'
+import { Container, Box, Heading, Link as A } from 'theme-ui'
 import { Styled as Content } from '../components/content'
 
 const Letterhead = ({
   title,
-  desc,
-  author = { name: null, avatar: null, url: null },
+  author,
   date,
   img,
   path,
@@ -24,34 +23,37 @@ const Letterhead = ({
         title={title}
         description={
           author?.name && date
-            ? `${desc} Written by ${author.name} on ${date}.`
-            : desc
+            ? `Run by ${author} on ${date}.`
+            : ''
         }
         image={img}
       />
     )}
-    <Header title={title} desc={desc} {...props}>
-      {author?.name && <Authored {...author} date={date} />}
-    </Header>
+    <Box
+      as="header"
+      sx={{
+        bg: 'sheet',
+        textAlign: 'center',
+        px: 3,
+        pb: [3, 4],
+        mb: [3, 4]
+      }}
+    >
+      <Heading as="h1" variant="title" color="primary" mb={2}>
+        {title}
+      </Heading>
+      <Container variant="copy">
+        <Heading
+          as="h2"
+          variant="subtitle"
+          sx={{ mt: 3, color: 'secondary' }}
+        >
+          By {author}. Run on {date}.
+        </Heading>
+      </Container>
+    </Box>
     <Container as={Content} variant="copy" pt={3} pb={[4, 5]}>
       {children}
-      {!hideGitHub && (
-        <Button
-          as="a"
-          target="_blank"
-          href={`https://github.com/hackclub/workshops/blob/main/pages/${path}`}
-          variant="outline"
-          sx={{
-            mt: 2,
-            fontSize: 1,
-            textDecoration: 'none !important',
-            '@media print': { display: 'none' }
-          }}
-        >
-          <GitHub />
-          Edit on GitHub
-        </Button>
-      )}
     </Container>
   </>
 )
