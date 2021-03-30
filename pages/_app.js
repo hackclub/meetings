@@ -21,7 +21,6 @@ export default class App extends NextApp {
           description="A collection of real Hack Club meetings, paired with everything you need to run them in your own club."
           image="https://cloud-6igzrxeem-hack-club-bot.vercel.app/0meetings.png"
         />
-        <Nav />
         <Component {...pageProps} />
       </ThemeProvider>
     )

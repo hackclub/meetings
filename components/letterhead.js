@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Meta from '@hackclub/meta'
 import { Container, Box, Heading, Link as A } from 'theme-ui'
 import { Styled as Content } from '../components/content'
+import Nav from '../components/nav'
 
 const Letterhead = ({
   title,
@@ -31,6 +32,7 @@ const Letterhead = ({
           image={img}
         />
       )}
+      <Nav />
       <Box
         as="header"
         sx={{

@@ -70,7 +70,7 @@ export default () => {
     <Box
       as="nav"
       sx={{
-        bg: 'sheet',
+        bg: 'none',
         color: 'nav',
         py: 3
       }}
