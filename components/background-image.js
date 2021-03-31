@@ -11,7 +11,7 @@ import Image from 'next/image'
  */
 
 const BGImg = ({
-  gradient = 'linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.5))',
+  gradient = 'linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.95))',
   ...props
 }) => (
   <Box
@@ -33,11 +33,11 @@ const BGImg = ({
         bottom: 0
       },
       '> div': { height: '100%', width: '100%' },
-      img: { objectFit: 'cover', objectPosition: 'center' },
+      img: { objectFit: 'cover', objectPosition: 'center', filter: 'brightness(80%) blur(2px)' },
       '~ *': { position: 'relative' }
     }}
   >
-    <Image layout="responsive" {...props} />
+    <Image priority={true} layout="responsive" {...props} />
   </Box>
 )
 

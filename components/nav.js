@@ -70,11 +70,17 @@ export default () => {
     <Box
       as="nav"
       sx={{
-        bg: 'none',
+        bg: home ? 'transparent' : 'sheet',
+        zIndex: '999',
         color: 'nav',
-        py: 3
+        width: '100vw',
+        py: 3,
+        position:  home ? 'absolute' : 'relative'
       }}
     >
+      <Box sx={{
+        position: 'relative'
+      }}>
       <Container
         sx={{
           display: 'flex',
@@ -98,6 +104,7 @@ export default () => {
         </NavButton>
         <ColorSwitcher />
       </Container>
+      </Box>
     </Box>
   )
 }

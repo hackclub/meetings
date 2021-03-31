@@ -25,7 +25,7 @@ import BGImg from '../components/background-image'
   <Container
     variant="narrow"
     duration={768}
-    sx={{ py: [5, 6], color: 'white', textShadow: 'text' }}
+    sx={{ py: [5, 6], color: 'white', textShadow: 'card' }}
   >
     <Heading as="h1" variant="title" color="primary" mb={2}>
       Hack Club Meetings
@@ -34,7 +34,7 @@ import BGImg from '../components/background-image'
       <Heading
         as="h2"
         variant="subtitle"
-        sx={{ mt: 3, color: 'text' }}
+        sx={{ mt: 3, color: 'white' }}
       >
         A collection of real{' '}
         <A href="https://hackclub.com/">Hack Club</A> meetings, paired with everything you need to run them in your own club.
@@ -46,8 +46,10 @@ import BGImg from '../components/background-image'
 <Container variant="copy">
 
 <Text
+  as="div"
   sx={{
-    fontSize: 2
+    fontSize: 2,
+    mt: '32px'
   }}
 >
 
