@@ -12,9 +12,12 @@ import MeetingList from '../components/meeting-list'
 import Footer from '../components/footer'
 import Nav from '../components/nav'
 import BGImg from '../components/background-image'
-import Intro from '../components/intro'
+import Intro from '../components/intro.mdx'
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function App() {
+  const [boxHeight, setBoxHeight] = useState("0")
+  const [boxOpened, setBoxOpened] = useState(false)
   return (
     <>
       <Nav />
@@ -24,7 +27,8 @@ export default function App() {
           bg: 'dark',
           textAlign: 'center',
           position: 'relative',
-          overflow: 'hidden'
+          overflow: '',
+          maxHeight: '400px'
         }}
       >
         <BGImg
@@ -34,38 +38,50 @@ export default function App() {
           height={1170}
           alt="Screenshot of a Hack Club meeting running the Sound Galaxy workshop"
         />
-        <Container
-          variant="narrow"
-          duration={768}
-          sx={{ py: [5, 6], color: 'white', textShadow: 'card' }}
-        >
-          <Heading as="h1" variant="title" color="primary" mb={2}>
-            Hack Club Meetings
-          </Heading>
-          <Container variant="copy">
-            <Heading as="h2" variant="subtitle" sx={{ mt: 3, color: 'white' }}>
-              A collection of real <A href="https://hackclub.com/">Hack Club</A>{' '}
-              meetings, paired with everything you need to run them in your own
-              club.
-            </Heading>
-          </Container>
+        <Container duration={768} variant="wide" sx={{ textShadow: 'card', mx: '8px!important', px: '100px' }}>
+          <Grid gap={2} columns={['1', '1', '2fr 1fr']}>
+            <Box sx={{py: [5, 6]}}>
+              <Heading as="h1" variant="title" color="white" mb={2} sx={{ textAlign: 'left'}}>
+                Hack Club Meetings
+              </Heading>
+              <Box sx={{ textAlign: 'left', maxWidth: '80%' }}>
+                <Heading
+                  as="h2"
+                  variant="subtitle"
+                  sx={{ mt: 3, color: 'white' }}
+                >
+                  A collection of real{' '}
+                  <A href="https://hackclub.com/">Hack Club</A> meetings, paired
+                  with everything you need to run them in your own club.
+                </Heading>
+              </Box>
+            </Box>
+            <Card
+            onClick={()=> setBoxOpened(true)}
+              sx={{
+                my: [4, '78px'],
+                display: ['none', 'none', 'block'],
+                p: '24px!important',
+                px: '24px!important',
+                textShadow: 'none',
+                textAlign: 'left',
+                
+                maxHeight: !boxOpened ? '300px' : `calc(400px + ${boxHeight}px - 78px + 32px)`,
+                background: 'white',
+                color: 'black',
+                overflow: 'scroll',
+                mx: '10px',
+
+              }}
+            >
+              <Intro />
+            </Card>
+          </Grid>
         </Container>
       </Box>
 
-      <Container variant="copy">
-        <Text
-          as="div"
-          sx={{
-            fontSize: 2,
-            mt: '32px'
-          }}
-        >
-          <Intro />
-        </Text>
-      </Container>
-
-      <Container>
-        <MeetingList />
+      <Container variant="wide" sx={{px: '100px'}}>
+        <MeetingList setBoxHeight={setBoxHeight} />
       </Container>
 
       <Footer />

@@ -94,6 +94,7 @@ export default () => {
         }}
       >
         {!home ? <BackButton /> : <Flag />}
+        {!home ? <>
         <NavButton
           as="a"
           href="https://github.com/hackclub/meetings"
@@ -102,7 +103,7 @@ export default () => {
         >
           <GitHub size={24} />
         </NavButton>
-        <ColorSwitcher />
+        <ColorSwitcher /> </> : ''}
       </Container>
       </Box>
     </Box>
