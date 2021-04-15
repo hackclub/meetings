@@ -1,4 +1,6 @@
+import React, { useContext, useRef } from 'react'
 import { Box, Container } from 'theme-ui'
+import EmbedContext from './youtube-embed-context'
 import YouTubePlayer from 'react-player/youtube'
 
 const Embed = props => {
@@ -34,10 +36,31 @@ const Embed = props => {
   )
 }
 
-const YouTubeEmbed = ({ url }) => (
-  <Embed>
-    <YouTubePlayer url={url} controls={true} />
-  </Embed>
-)
+const YouTubeEmbed = ({ url }) => {
+  const player = useRef(null)
+
+  const seekToTimestamp = (timestamp) => {
+    const formattedTimestamp = formatTimestamp(timestamp)
+    player.current.seekTo(formattedTimestamp)
+  }
+
+  const { value, updateValue } = useContext(EmbedContext)
+
+  return (
+    <>
+      <p>value={value}</p>
+      <Embed>
+        <YouTubePlayer ref={player} url={url} controls={true} />
+      </Embed>
+    </>
+  )
+}
+
+const formatTimestamp = (timestamp) => {
+  // timestamps are formatted like xx:xx, for example 13:47. but the youtube iframe api requires it to be in seconds
+  // this converts the timestamp string to seconds
+  const timestampSplit = timestamp.split(':')
+  return (timestampSplit[0] * 60) + timestampSplit[1]
+}
 
 export default YouTubeEmbed
