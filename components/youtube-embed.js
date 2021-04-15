@@ -46,13 +46,15 @@ const YouTubeEmbed = ({ url }) => {
 
   const { value, updateValue } = useContext(EmbedContext)
 
+  if (player?.current && value !== '') {
+    seekToTimestamp(value)
+    updateValue('')
+  }
+
   return (
-    <>
-      <p>value={value}</p>
-      <Embed>
-        <YouTubePlayer ref={player} url={url} controls={true} />
-      </Embed>
-    </>
+    <Embed>
+      <YouTubePlayer ref={player} url={url} controls={true} pip={true} />
+    </Embed>
   )
 }
 
@@ -60,7 +62,10 @@ const formatTimestamp = (timestamp) => {
   // timestamps are formatted like xx:xx, for example 13:47. but the youtube iframe api requires it to be in seconds
   // this converts the timestamp string to seconds
   const timestampSplit = timestamp.split(':')
-  return (timestampSplit[0] * 60) + timestampSplit[1]
+  const seconds = timestampSplit[2]
+    ? (+timestampSplit[0]) * 60 * 60 + (+timestampSplit[1]) * 60 + (+timestampSplit[2])
+    : (+timestampSplit[0]) * 60 + (+timestampSplit[1])
+  return seconds
 }
 
 export default YouTubeEmbed
