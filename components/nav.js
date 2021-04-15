@@ -1,4 +1,4 @@
-import { ArrowLeft, Moon, GitHub } from 'react-feather'
+import { Back, Moon, Github } from 'supercons'
 import { Box, Container, IconButton, Image, Link as A } from 'theme-ui'
 import { useColorMode } from 'theme-ui'
 import { useRouter } from 'next/router'
@@ -27,7 +27,7 @@ const BackButton = ({ to = '/', text = 'All Meetings' }) => (
       title={to === '/' ? 'Back to homepage' : 'Back'}
       sx={{ display: 'flex', width: 'auto', pr: 2 }}
     >
-      <ArrowLeft />
+      <Back />
       {text}
     </NavButton>
   </Link>
@@ -102,7 +102,7 @@ const Nav = () => {
             aria-label="View source code on GitHub"
             sx={{ ml: 'auto' }}
           >
-            <GitHub size={24} />
+            <Github size={24} />
           </NavButton>
           <ColorSwitcher />
         </Container>
