@@ -19,6 +19,9 @@ const Embed = ({ docked = false, ...props }) => {
               left: [2, 3],
               right: [2, 'auto'],
               bottom: 3,
+              '@supports (padding: calc(env(safe-area-inset-bottom)))': {
+                bottom: 'calc(16px + env(safe-area-inset-bottom))'
+              },
               position: 'fixed',
               // On mobile, video should be full width minus gutters, & the same 16/9 aspect ratio
               // Larger than mobile, the video will be in the lower left corner
