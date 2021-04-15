@@ -8,6 +8,7 @@ const Timestamp = ({ children }) => {
   return (
     <Box
       as="button"
+      className="timestamp"
       sx={{
         appearance: 'none',
         border: 0,
@@ -15,14 +16,9 @@ const Timestamp = ({ children }) => {
         background: 'transparent',
         font: 'inherit',
         cursor: 'pointer',
-        color: 'var(--meeting-color-2)',
         fontWeight: 'bold',
         textDecoration: 'underline',
-        textUnderlinePosition: 'under',
-        transition: '0.125s color ease-in-out',
-        ':hover,:focus': {
-          color: 'var(--meeting-color-1)'
-        }
+        textUnderlinePosition: 'under'
       }}
       onClick={e => {
         updateSecondsToSeek(seconds)

@@ -69,12 +69,16 @@ const Letterhead = ({
         sx={t => ({
           pt: 3,
           pb: [4, 5],
-          'a, button': {
+          'a, .timestamp': {
             color: colors.color2,
             transition: '0.125s color ease-in-out',
             ':hover,:focus': {
               color: colors.color1
             }
+          },
+          '.dock': {
+            bg: colors.color1,
+            backgroundImage: t.util.gx(colors.color1, colors.color2)
           }
         })}
       >
