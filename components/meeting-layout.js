@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Meta from '@hackclub/meta'
 import { Container, Box, Heading, Link as A } from 'theme-ui'
-import { Styled as Content } from '../components/content'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
+import { Styled as Content } from '../components/content'
+import { MDXProvider } from '@mdx-js/react'
+import YouTubeEmbed from '../components/youtube-embed'
+import Timestamp from '../components/timestamp'
 
 const Letterhead = ({
   title,
@@ -82,7 +85,7 @@ const Letterhead = ({
           }
         })}
       >
-        {children}
+        <MDXProvider components={{ YouTubeEmbed, Timestamp}} children={children} />
       </Container>
       <Footer />
     </>
