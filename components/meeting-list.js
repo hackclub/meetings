@@ -32,31 +32,38 @@ const Meeting = ({ name, img, slug, color1, color2 }) => (
       </Box>
     </Card>
   </Link>
-
 )
 
 const MeetingList = () => {
   // TODO: get cycling color here
   return (
-  <Grid
-    gap={[3, 4]}
-    columns={[null, 2, 3]}
-    sx={{
-      my: [3, 4],
-      '@media print': { gridTemplateColumns: 'repeat(2,1fr)' }
-    }}
-  >
-    {Object.keys(data['meetings']).map((meeting, i) => {
-      const meetingData = data['meetings'][meeting]
-      const colors = getColors(i)
-      return (
-        <Meeting name={meetingData.title} img={meetingData.img} slug={meetingData.slug} color1={colors.color1} color2={colors.color2} key={i} />
-      )})}
-  </Grid>
+    <Grid
+      gap={[3, 4]}
+      columns={[null, 2, 3]}
+      sx={{
+        my: [3, 4],
+        '@media print': { gridTemplateColumns: 'repeat(2,1fr)' }
+      }}
+    >
+      {Object.keys(data['meetings']).map((meeting, i) => {
+        const meetingData = data['meetings'][meeting]
+        const colors = getColors(i)
+        return (
+          <Meeting
+            name={meetingData.title}
+            img={meetingData.img}
+            slug={meetingData.slug}
+            color1={colors.color1}
+            color2={colors.color2}
+            key={i}
+          />
+        )
+      })}
+    </Grid>
   )
 }
 
-const getColors = (meetingIndex) => {
+const getColors = meetingIndex => {
   const data = require('../data.json')
   const colors = Object.entries(data['colors'])
   return colors[meetingIndex % colors.length][1]

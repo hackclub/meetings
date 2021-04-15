@@ -1,10 +1,8 @@
-import React, { createContext } from 'react'
+import { createContext } from 'react'
 
 const EmbedContext = createContext({
-  value: '',
-  updateValue: () => {
-
-  }
+  secondsToSeek: 0,
+  updateSecondsToSeek: () => {}
 })
 
 export default EmbedContext

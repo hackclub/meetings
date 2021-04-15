@@ -1022,7 +1022,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.13.10"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
   integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
@@ -1527,6 +1527,14 @@
     "@theme-ui/core" "^0.6.2"
     "@theme-ui/css" "^0.6.2"
     deepmerge "^4.2.2"
+
+"@theme-ui/color@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@theme-ui/color/-/color-0.6.2.tgz#67159ed1991c6e1586f66fc6ac7874da156f3974"
+  integrity sha512-Lt1EJiTq/wd219ke/qi3FwVJWsKCkTIQFxws8WeL5Vqkqwyv2T6cyz9+8bnHm+J9v24Y+8WcmwbdBr4IDAnQMA==
+  dependencies:
+    "@theme-ui/css" "^0.6.2"
+    polished "^4.0.5"
 
 "@theme-ui/components@^0.6.2":
   version "0.6.2"
@@ -3539,6 +3547,13 @@ pnp-webpack-plugin@1.6.4:
   integrity sha512-7Wjy+9E3WwLOEL30D+m8TSTF7qJJUJLONBnwQp0518siuMxUQUbgZwssaFX+QKlZkjHZcw/IpZCt/H0srrntSg==
   dependencies:
     ts-pnp "^1.1.6"
+
+polished@^4.0.5:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-4.1.1.tgz#40442cc973348e466f2918cdf647531bb6c29bfb"
+  integrity sha512-4MZTrfPMPRLD7ac8b+2JZxei58zw6N1hFkdBDERif5Tlj19y3vPoPusrLG+mJIlPTGnUlKw3+yWz0BazvMx1vg==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 postcss@8.1.7:
   version "8.1.7"

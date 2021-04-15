@@ -33,7 +33,11 @@ const BGImg = ({
         bottom: 0
       },
       '> div': { height: '100%', width: '100%' },
-      img: { objectFit: 'cover', objectPosition: 'center', filter: 'brightness(80%) blur(2px)' },
+      img: {
+        objectFit: 'cover',
+        objectPosition: 'center',
+        filter: 'brightness(80%) blur(2px)'
+      },
       '~ *': { position: 'relative' }
     }}
   >

@@ -62,7 +62,7 @@ const ColorSwitcher = props => {
   )
 }
 
-export default () => {
+const Nav = () => {
   const [mode] = useColorMode()
   const router = useRouter()
   const home = router.pathname === '/'
@@ -75,36 +75,40 @@ export default () => {
         color: 'nav',
         width: '100vw',
         py: 3,
-        position:  home ? 'absolute' : 'relative'
+        position: home ? 'absolute' : 'relative'
       }}
     >
-      <Box sx={{
-        position: 'relative'
-      }}>
-      <Container
+      <Box
         sx={{
-          display: 'flex',
-          alignItems: 'center',
-          a: {
-            fontSize: 1,
-            color: 'primary',
-            textDecoration: 'none',
-            mr: [3, 4]
-          }
+          position: 'relative'
         }}
       >
-        {!home ? <BackButton /> : <Flag />}
-        <NavButton
-          as="a"
-          href="https://github.com/hackclub/meetings"
-          aria-label="View source code on GitHub"
-          sx={{ ml: 'auto' }}
+        <Container
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            a: {
+              fontSize: 1,
+              color: 'primary',
+              textDecoration: 'none',
+              mr: [3, 4]
+            }
+          }}
         >
-          <GitHub size={24} />
-        </NavButton>
-        <ColorSwitcher />
-      </Container>
+          {!home ? <BackButton /> : <Flag />}
+          <NavButton
+            as="a"
+            href="https://github.com/hackclub/meetings"
+            aria-label="View source code on GitHub"
+            sx={{ ml: 'auto' }}
+          >
+            <GitHub size={24} />
+          </NavButton>
+          <ColorSwitcher />
+        </Container>
       </Box>
     </Box>
   )
 }
+
+export default Nav

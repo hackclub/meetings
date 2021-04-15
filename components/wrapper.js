@@ -2,9 +2,11 @@ import EmbedContext from './youtube-embed-context'
 import { useState } from 'react'
 
 const Wrapper = ({ children }) => {
-  const [timestamp, setTimestamp] = useState('00:00')
+  const [timestamp, setTimestamp] = useState(0)
   return (
-    <EmbedContext.Provider value={{ value: timestamp, updateValue: setTimestamp }}>
+    <EmbedContext.Provider
+      value={{ secondsToSeek: timestamp, updateSecondsToSeek: setTimestamp }}
+    >
       {children}
     </EmbedContext.Provider>
   )
