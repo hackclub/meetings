@@ -77,7 +77,7 @@ const YouTubeEmbed = ({ url }) => {
   return (
     <>
       <Embed docked={docked}>
-        <YouTubePlayer ref={player} url={url} controls={true} pip={true} />
+        <YouTubePlayer ref={player} url={url} controls pip />
       </Embed>
       <Box sx={{ textAlign: 'center', pb: 3 }}>
         <Button
