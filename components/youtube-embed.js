@@ -60,11 +60,11 @@ const YouTubeEmbed = ({ url }) => {
   const [docked, setDocked] = useState(false)
 
   const seekToTimestamp = seconds => {
-    const ytPlayer = player.current.getInternalPlayer()
-    ytPlayer.playVideo()
-    ytPlayer.pauseVideo()
+    const internalPlayer = player.current.getInternalPlayer()
+    internalPlayer.playVideo()
+    internalPlayer.pauseVideo()
     player.current.seekTo(seconds)
-    ytPlayer.playVideo()
+    internalPlayer.playVideo()
   }
 
   const { secondsToSeek, updateSecondsToSeek } = useContext(EmbedContext)
