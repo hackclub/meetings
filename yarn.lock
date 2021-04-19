@@ -1528,12 +1528,12 @@
     "@theme-ui/css" "0.7.0"
     deepmerge "^4.2.2"
 
-"@theme-ui/color@^0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@theme-ui/color/-/color-0.6.2.tgz#67159ed1991c6e1586f66fc6ac7874da156f3974"
-  integrity sha512-Lt1EJiTq/wd219ke/qi3FwVJWsKCkTIQFxws8WeL5Vqkqwyv2T6cyz9+8bnHm+J9v24Y+8WcmwbdBr4IDAnQMA==
+"@theme-ui/color@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/color/-/color-0.7.0.tgz#9f80240dec9ddeaeeb8bc3fc27b73b0f368d8eb4"
+  integrity sha512-7JlXXFcaPHd83aiM6l3abxYJyiVr1BPwNYGmw1LH+ZvXunPL+/l2o8+4rfr8IbZbU1QTT1eequGUwqziuYiirw==
   dependencies:
-    "@theme-ui/css" "^0.6.2"
+    "@theme-ui/css" "0.7.0"
     polished "^4.0.5"
 
 "@theme-ui/components@0.7.0":
