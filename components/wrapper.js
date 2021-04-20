@@ -1,4 +1,4 @@
-import EmbedContext from './youtube-embed-context'
+import EmbedContext from './embed-context'
 import { useState } from 'react'
 
 const Wrapper = ({ children }) => {

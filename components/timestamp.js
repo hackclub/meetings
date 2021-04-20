@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import EmbedContext from './youtube-embed-context'
+import EmbedContext from './embed-context'
 import { Box } from 'theme-ui'
 
 const Timestamp = ({ children }) => {
