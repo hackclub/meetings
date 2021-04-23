@@ -1,6 +1,6 @@
 import React, { useContext, useState, useRef } from 'react'
 import { Box, Button } from 'theme-ui'
-import EmbedContext from './youtube-embed-context'
+import EmbedContext from './embed-context'
 import YouTubePlayer from 'react-player/youtube'
 import { CornerDownLeft, CornerUpRight } from 'react-feather'
 

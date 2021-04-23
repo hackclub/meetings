@@ -1,9 +1,14 @@
 import React, { useContext, useState, useRef } from 'react'
 import { Box, Button } from 'theme-ui'
-import EmbedContext from './youtube-embed-context'
+import EmbedContext from './embed-context'
 import VimeoPlayer from 'react-player/vimeo'
-import Vimeo from '@vimeo/player'
 import { CornerDownLeft, CornerUpRight } from 'react-feather'
+
+// YouTube's AI moderator decided that the Splatter Paint meeting recording has graphic content,
+// and they automatically age-restricted it, which means I can't embed it on this site.
+// ...welcome to the future. I couldn't find a way around it, so I had to upload the video
+// to Vimeo. I don't expect this component to be used for anything other than the Splatter Paint Meeting,
+// but it's here as a backup in case your meeting recording can't uploaded to YouTube for whatever reason.
 
 const Embed = ({ docked = false, ...props }) => {
   return (
