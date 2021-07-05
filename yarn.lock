@@ -1287,10 +1287,10 @@
     unist-util-remove "^1.0.3"
     unist-util-visit "^2.0.1"
 
-"@hackclub/meta@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@hackclub/meta/-/meta-1.1.0.tgz#08051822921ff1406b23ff242d3ce395908c7817"
-  integrity sha512-YgDkhrKVzElaoEAf5xcXu0C5RKqwft2g2Rk26dHdcRrb3oOUDa9mJM6O0KC2VJ4G7/iLO+qotUnc/vtsREugVw==
+"@hackclub/meta@^1.1.32":
+  version "1.1.32"
+  resolved "https://registry.yarnpkg.com/@hackclub/meta/-/meta-1.1.32.tgz#ce10461cb440d42649d106d779946341cef9c42d"
+  integrity sha512-vevgJP1jsbSn1TCLPJWZsmVJ51DcyOsXtMlUXmIPPGaTNPm2WwEQLOWrVmb5lpZJsONLeSmcQCrx4rpmGeyYIw==
 
 "@hackclub/theme@^0.3.1":
   version "0.3.1"
@@ -1551,14 +1551,6 @@
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.10.0.tgz#871f63334fb138491406c32f8347d53b19846a9b"
   integrity sha512-Up3HqXoy2ERn/9gVxApCSl2n9vwtHBwPrYlMyEjX0YPs/rxmo+Aqe3kAxO+SG9idMw08mtdaDfMIFaPsBE5ovA==
-  dependencies:
-    "@emotion/react" "^11.1.1"
-    csstype "^3.0.5"
-
-"@theme-ui/css@0.8.4":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.8.4.tgz#2539c8ccb52054d54593786e5f1e89f118e908c0"
-  integrity sha512-ZubYp4glaDpsJSd2z38FlwkItvXk8+t0i0323ZWNO7Liqg4t/hJT+7RmtWj1NQ2IPVqTUEmsH/hVdz5SIPu2LA==
   dependencies:
     "@emotion/react" "^11.1.1"
     csstype "^3.0.5"
