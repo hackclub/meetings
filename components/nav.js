@@ -73,7 +73,7 @@ const Nav = () => {
         bg: home ? 'transparent' : 'sheet',
         zIndex: '999',
         color: 'nav',
-        width: '100vw',
+        width: '100%',
         py: 3,
         position: home ? 'absolute' : 'relative'
       }}
