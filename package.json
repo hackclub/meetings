@@ -17,7 +17,7 @@
     "@next/mdx": "^12.1.6",
     "@theme-ui/color": "^0.14.5",
     "lodash": "^4.17.21",
-    "next": "^12.1.6",
+    "next": "^12.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",
