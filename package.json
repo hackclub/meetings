@@ -20,7 +20,7 @@
     "next": "^12.2.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9",
+    "react-feather": "^2.0.10",
     "react-player": "^2.10.1",
     "theme-ui": "^0.10.0"
   }
